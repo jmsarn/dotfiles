@@ -1,0 +1,4 @@
+data/*.json
+data/*.dvc
+data/*.csv
+data/pet_outputs/*.csv
