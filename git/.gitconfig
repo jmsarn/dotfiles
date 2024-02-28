@@ -1,6 +1,6 @@
 [user]
-	email = james@rs21.io
-	name = James Arnold
+    email = james@rs21.io
+    name = James Arnold
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILqURm12Kb57a4RQTTDYoY3zELfKAWXKWDKC3soLV6iX
 
 [gpg]
