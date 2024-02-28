@@ -1,6 +1,5 @@
 vim.keymap.set(
     "i",
-    "<C-l>",
+    "<C-a>",
     function() vim.fn.feedkeys(vim.fn['copilot#Accept'](), '') end
 )
--- vim.keymap.set(
