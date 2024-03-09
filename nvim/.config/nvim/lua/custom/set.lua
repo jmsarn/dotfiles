@@ -29,4 +29,6 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "88"
 
+vim.opt.splitright = true
+
 vim.g.python3_host_prog = os.getenv("HOME") .. "/.local/venv/nvim/bin/python3"
