@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/james/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
   },
-  ["black-nvim"] = {
-    loaded = true,
-    path = "/home/james/.local/share/nvim/site/pack/packer/start/black-nvim",
-    url = "https://github.com/averms/black-nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/james/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -108,6 +103,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/james/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\2Õ\1\0\0\4\0\f\0\0156\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\0015\2\a\0005\3\6\0=\3\b\0025\3\t\0=\3\n\2=\2\v\1B\0\2\1K\0\1\0\21formatters_by_ft\vpython\1\3\0\0\nisort\nblack\blua\1\0\0\1\2\0\0\vstylua\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3ô\3\1\0\1\20notify_on_error\1\nsetup\fconform\frequire\0" },
+    loaded = true,
+    path = "/home/james/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
   },
   ["copilot.vim"] = {
     config = { "\27LJ\2\2€\1\0\0\2\0\6\0\r6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0+\1\2\0=\1\3\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0K\0\1\0\5\25copilot_tab_fallback\26copilot_assume_mapped\23copilot_no_tab_map\6g\bvim\0" },
@@ -193,6 +194,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for solarized]], true)
 try_loadstring("\27LJ\2\2[\0\0\2\0\6\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\4\0'\1\5\0B\0\2\1K\0\1\0\26colorscheme solarized\bcmd\tdark\15background\6o\bvim\0", "config", "solarized")
 time([[Config for solarized]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\2Õ\1\0\0\4\0\f\0\0156\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\0015\2\a\0005\3\6\0=\3\b\0025\3\t\0=\3\n\2=\2\v\1B\0\2\1K\0\1\0\21formatters_by_ft\vpython\1\3\0\0\nisort\nblack\blua\1\0\0\1\2\0\0\vstylua\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3ô\3\1\0\1\20notify_on_error\1\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
 -- Config for: copilot.vim
 time([[Config for copilot.vim]], true)
 try_loadstring("\27LJ\2\2€\1\0\0\2\0\6\0\r6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0+\1\2\0=\1\3\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0K\0\1\0\5\25copilot_tab_fallback\26copilot_assume_mapped\23copilot_no_tab_map\6g\bvim\0", "config", "copilot.vim")
