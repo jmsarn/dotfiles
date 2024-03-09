@@ -51,5 +51,25 @@ return require('packer').startup(function(use)
             vim.g.copilot_tab_fallback = "";
         end
     }
-    use('averms/black-nvim')
+    use({ -- Autoformat
+        'stevearc/conform.nvim',
+        config = function()
+            require('conform').setup({
+                notify_on_error = true,
+                format_on_save = {
+                    timeout_ms = 500,
+                    lsp_fallback = true,
+                },
+                formatters_by_ft = {
+                    lua = { 'stylua' },
+                    -- Conform can also run multiple formatters sequentially
+                    python = { "isort", "black" },
+                    --
+                    -- You can use a sub-list to tell conform to run *until* a formatter
+                    -- is found.
+                    -- javascript = { { "prettierd", "prettier" } },
+                },
+            })
+        end
+    })
 end)
