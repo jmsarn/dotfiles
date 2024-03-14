@@ -137,6 +137,7 @@ require("lazy").setup({
             "williamboman/mason-lspconfig.nvim",
             "WhoIsSethDaniel/mason-tool-installer.nvim",
             { "j-hui/fidget.nvim", opts = {} },
+            { "folke/neodev.nvim", opts = { library = { plugins = { "nvim-dap-ui" }, types = true } } },
         },
         config = function()
             vim.api.nvim_create_autocmd("LspAttach", {
@@ -453,6 +454,7 @@ require("lazy").setup({
         "echasnovski/mini.nvim",
         config = function()
             require("mini.ai").setup { n_lines = 500 }
+            require("mini.indentscope").setup()
             require("mini.surround").setup()
 
             local statusline = require("mini.statusline")
@@ -461,6 +463,21 @@ require("lazy").setup({
                 return "%2l:%-2v"
             end
             --  Check out: https://github.com/echasnovski/mini.nvim
+        end
+    },
+    "mfussenegger/nvim-dap",
+    {
+        "rcarriga/nvim-dap-ui",
+        config = function()
+            require("dapui").setup()
+        end
+    },
+    {
+        "mfussenegger/nvim-dap-python",
+        config = function()
+            local dap = require("dap-python")
+            dap.setup(vim.g.python3_host_prog)
+            dap.test_runner = "pytest"
         end
     }
 })

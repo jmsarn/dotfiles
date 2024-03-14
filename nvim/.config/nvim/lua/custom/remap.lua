@@ -31,3 +31,15 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+-- Debugging keymaps
+vim.keymap.set("n", "<F3>", ":lua require'dap'.continue()<CR>", { desc = "Continue" })
+vim.keymap.set("n", "<F4>", ":lua require'dap'.step_over()<CR>", { desc = "Step over" })
+vim.keymap.set("n", "<F5>", ":lua require'dap'.step_into()<CR>", { desc = "Step into" })
+vim.keymap.set("n", "<F6>", ":lua require'dap'.step_out()<CR>", { desc = "Step out" })
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle breakpoint" })
+vim.keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+    { desc = "Conditional breakpoint" })
+vim.keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
+    { desc = "Log breakpoint" })
+vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", { desc = "Open REPL" })
