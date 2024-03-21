@@ -419,7 +419,14 @@ require("lazy").setup({
             )
         end,
     },
-    { "m4xshen/autoclose.nvim", opts = {} },
+    {
+        "m4xshen/autoclose.nvim",
+        opts = {
+            options = {
+                disabled_filetypes = { "text", "markdown", "gitcommit" }
+            },
+        }
+    },
     {
         "echasnovski/mini.nvim",
         config = function()
