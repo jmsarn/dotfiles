@@ -241,7 +241,38 @@ require("lazy").setup({
                 },
                 dockerls = {},
                 gopls = {},
-                pyright = {},
+                ruff_lsp = {
+                    on_attach = function(client)
+                        if client.name == "ruff_lsp" then
+                            client.server_capabilities.hoverProvider = false
+                        end
+                    end,
+
+                },
+                --pyright = {
+                --    settings = {
+                --        pyright = {
+                --            disableOrganizeImports = true,
+                --        },
+                --        python = {
+                --            analysis = {
+                --                --ignore = { "*" },
+                --            },
+                --        }
+                --    }
+                --},
+                basedpyright = {
+                    settings = {
+                        pyright = {
+                            disableOrganizeImports = true,
+                        },
+                        python = {
+                            analysis = {
+                                ignore = { "*" },
+                            },
+                        }
+                    }
+                },
                 tsserver = {},
                 jsonls = {
                     settings = {
