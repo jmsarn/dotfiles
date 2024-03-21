@@ -401,6 +401,7 @@ require("lazy").setup({
         config = function()
             -- See `:help cmp`
             local cmp = require("cmp")
+            local lspkind = require("lspkind")
             local luasnip = require("luasnip")
             luasnip.config.setup({})
 
@@ -411,6 +412,13 @@ require("lazy").setup({
                     end,
                 },
                 completion = { completeopt = "menu,menuone,noinsert" },
+                formatting = {
+                    format = lspkind.cmp_format({
+                        mode = "symbol",
+                        max_width = 50,
+                        symbol_map = { Copilot = "" }
+                    })
+                },
 
                 -- For an understanding of why these mappings were
                 -- chosen, you will need to read `:help ins-completion`
@@ -455,22 +463,31 @@ require("lazy").setup({
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
                     { name = "path" },
+                    { name = "copilot" },
                 },
             })
         end,
     },
     {
-        "github/copilot.vim",
-        lazy = false,
+        "zbirenbaum/copilot.lua",
+        lazy = true,
+        cmd = "Copilot",
+        event = "InsertEnter",
         config = function()
-            vim.g.copilot_no_tab_map = true
-            vim.g.copilot_assume_mapped = true
-            vim.g.copilot_tab_fallback = ""
-            vim.keymap.set(
-                "i",
-                "<C-a>",
-                function() vim.fn.feedkeys(vim.fn['copilot#Accept'](), '') end
-            )
+            require("copilot").setup({
+                suggestion = { enabled = false },
+                panel = { enabled = false },
+            })
+        end,
+
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        dependencies = {
+            "onsails/lspkind.nvim",
+        },
+        config = function()
+            require("copilot_cmp").setup()
         end,
     },
     {
