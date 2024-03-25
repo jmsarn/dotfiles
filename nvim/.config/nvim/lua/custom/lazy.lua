@@ -278,18 +278,18 @@ require("lazy").setup({
                 --        }
                 --    }
                 --},
-                basedpyright = {
-                    settings = {
-                        pyright = {
-                            disableOrganizeImports = true,
-                        },
-                        python = {
-                            analysis = {
-                                ignore = { "*" },
-                            },
-                        }
-                    }
-                },
+                --basedpyright = {
+                --    settings = {
+                --        pyright = {
+                --            disableOrganizeImports = true,
+                --        },
+                --        python = {
+                --            analysis = {
+                --                ignore = { "*" },
+                --            },
+                --        }
+                --    }
+                --},
                 tsserver = {},
                 jsonls = {
                     settings = {
