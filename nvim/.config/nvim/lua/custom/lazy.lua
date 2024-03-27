@@ -264,32 +264,25 @@ require("lazy").setup({
                             client.server_capabilities.hoverProvider = false
                         end
                     end,
-
                 },
-                --pyright = {
-                --    settings = {
-                --        pyright = {
-                --            disableOrganizeImports = true,
-                --        },
-                --        python = {
-                --            analysis = {
-                --                --ignore = { "*" },
-                --            },
-                --        }
-                --    }
-                --},
-                --basedpyright = {
-                --    settings = {
-                --        pyright = {
-                --            disableOrganizeImports = true,
-                --        },
-                --        python = {
-                --            analysis = {
-                --                ignore = { "*" },
-                --            },
-                --        }
-                --    }
-                --},
+                basedpyright = {
+                    settings = {
+                        pyright = {
+                            disableOrganizeImports = true,
+                        },
+                        basedpyright = {
+                            analysis = {
+                                autoSearchPaths = true,
+                                diagnosticMode = "openFilesOnly",
+                                ignore = { "*" },
+                                reportUnknownMemberType = false,
+                                strictParameterNoneValue = false,
+                                typeCheckingMode = "off",
+                                useLibraryCodeForTypes = true,
+                            },
+                        },
+                    },
+                },
                 tsserver = {},
                 jsonls = {
                     settings = {
@@ -350,6 +343,7 @@ require("lazy").setup({
             lint.linters_by_ft = {
                 markdown = { "vale" },
                 -- python = { "pylint", "ruff" },
+                python = { "pylint" },
                 rst = { "vale" },
                 text = { "vale" },
             }
