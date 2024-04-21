@@ -16,5 +16,5 @@ alias docker='podman'
 alias cat='batcat'
 
 # Alias ls with eza
-alias ls='eza -a --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
+alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
 alias ll='eza -a --color=always --long --icons=always'
