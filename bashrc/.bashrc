@@ -140,6 +140,22 @@ export GITHUB_TOKEN="op://Private/GitHub PAT/Access Token/Token"
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 shopt -s histappend
 
+# Rust
+. "$HOME/.cargo/env"
+
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+
+# Pulumi
+export PATH=$PATH:$HOME/.pulumi/bin
+export PULUMI_CONFIG_PASSPHRASE=""
+
+# Node Version Manager (NVM)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 # Bridge 1Password SSH agent
 source $HOME/.agent-bridge.sh
 
