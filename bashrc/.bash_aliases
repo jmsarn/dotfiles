@@ -1,6 +1,9 @@
 # Use neovim
 alias vim='nvim'
 
+# Activate virtual environment
+alias venv='source env/bin/activate'
+
 # Start tmux in github directory
 alias tmx='tmux new-session -c ~/github.com/rs21io'
 
