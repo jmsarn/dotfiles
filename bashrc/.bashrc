@@ -155,7 +155,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 # Bridge 1Password SSH agent
 source $HOME/.agent-bridge.sh
+
+# Shortcut to nvim lazy config
+export LAZY_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/custom/lazy.lua
 
