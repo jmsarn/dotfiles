@@ -19,3 +19,6 @@ apt-get install -y bat
 
 # Install eza
 cargo install eza
+
+# Install fzf
+apt-get install -y fzf
