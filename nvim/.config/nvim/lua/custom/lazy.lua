@@ -83,7 +83,7 @@ require("lazy").setup({
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         opts = {
-            ensure_installed = { "bash", "lua", "markdown", "python" },
+            ensure_installed = { "bash", "diff", "lua", "markdown", "python" },
             auto_install = true,
             highlight = { enable = true },
             indent = { enable = true },
@@ -150,11 +150,17 @@ require("lazy").setup({
     {
         "neovim/nvim-lspconfig",
         dependencies = {
-            "williamboman/mason.nvim",
+            { "williamboman/mason.nvim", config = true },
             "williamboman/mason-lspconfig.nvim",
             "WhoIsSethDaniel/mason-tool-installer.nvim",
-            { "j-hui/fidget.nvim", opts = {} },
-            { "folke/neodev.nvim", opts = { library = { plugins = { "nvim-dap-ui" }, types = true } } },
+            {
+                "j-hui/fidget.nvim",
+                opts = {}
+            },
+            {
+                "folke/neodev.nvim",
+                opts = { library = { plugins = { "nvim-dap-ui" }, types = true } }
+            },
         },
         config = function()
             vim.api.nvim_create_autocmd("LspAttach", {
