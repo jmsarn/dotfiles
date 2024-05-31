@@ -2,6 +2,10 @@
 
 GO_VERSION="1.22.3"
 
+# Install tmux and stow
+sudo apt-get update
+sudo apt-get install -y tmux stow
+
 # Install Golang
 curl -OL "https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz"
 sudo tar -C /usr/local -xzf "go${GO_VERSION}.linux-amd64.tar.gz"
@@ -21,10 +25,13 @@ sudo apt-get install -y python3.11 python3.11-dev python3.11-venv
 
 # Install node version manager and node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-nvm install node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm install --lts
 
 # Install bat
-apt-get install -y bat 
+sudo apt-get install -y bat 
 
 # Install eza
 ~/.cargo/bin/cargo install eza
