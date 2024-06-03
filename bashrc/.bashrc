@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 # Default editor
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 # Prevent not a tty error when logging in with SSO
