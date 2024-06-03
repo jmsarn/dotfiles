@@ -23,6 +23,10 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt-get update
 sudo apt-get install -y python3.11 python3.11-dev python3.11-venv
 
+# Create virtual environment for neovim python plugins
+mkdir -p ~/.local/venv
+python3.11 -m venv ~/.local/venv/nvim
+
 # Install node version manager and node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
