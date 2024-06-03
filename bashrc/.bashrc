@@ -120,10 +120,6 @@ fi
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
-# Prevent not a tty error when logging in with SSO
-export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
-
-
 # Git integration
 . ~/git-completion.bash
 . ~/git-prompt.sh
