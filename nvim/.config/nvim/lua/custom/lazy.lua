@@ -508,7 +508,7 @@ require("lazy").setup({
             "onsails/lspkind.nvim",
         },
         config = function()
-            require("copilot_cmp").setup()
+            require("copilot_cmp").setup({ fix_pairs = false })
         end,
     },
     {
