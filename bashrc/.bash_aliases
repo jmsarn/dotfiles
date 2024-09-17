@@ -20,3 +20,6 @@ alias ll='eza -a --color=always --long --icons=always'
 
 # Edit nvim lazy file
 alias edit-lazy='nvim $LAZY_CONFIG'
+
+# Update lazy packages
+alias update-lazy='nvim --headless "+Lazy! sync" +qa'
