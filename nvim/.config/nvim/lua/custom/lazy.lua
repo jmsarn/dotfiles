@@ -119,7 +119,7 @@ require("lazy").setup({
             end
 
             vim.keymap.set("n", "<leader>a", function()
-                harpoon:list():append()
+                harpoon:list():add()
             end)
             vim.keymap.set("n", "<C-e>", function()
                 toggle_telescope(harpoon:list())
@@ -376,6 +376,7 @@ require("lazy").setup({
                 lsp_fallback = true,
             },
             formatters_by_ft = {
+                html = { "djlint" },
                 go = { "goimports", "gofmt" },
                 lua = { "stylelua" },
                 python = { "isort", "black" },
@@ -508,7 +509,7 @@ require("lazy").setup({
             "onsails/lspkind.nvim",
         },
         config = function()
-            require("copilot_cmp").setup({ fix_pairs = false })
+            require("copilot_cmp").setup()
         end,
     },
     {
