@@ -290,7 +290,7 @@ require("lazy").setup({
                         },
                     },
                 },
-                tsserver = {},
+                ts_ls = {},
                 jsonls = {
                     settings = {
                         json = {
