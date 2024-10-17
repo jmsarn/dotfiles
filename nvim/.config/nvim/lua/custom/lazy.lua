@@ -380,6 +380,8 @@ require("lazy").setup({
                 go = { "goimports", "gofmt" },
                 lua = { "stylelua" },
                 python = { "isort", "black" },
+                javascript = { { 'prettierd', "prettier" } },
+                typescript = { { 'prettierd', "prettier" } },
             },
             formatters = {
                 isort = {
