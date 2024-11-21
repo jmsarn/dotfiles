@@ -263,6 +263,7 @@ require("lazy").setup({
                     },
                 },
                 --bashls = {},
+                prettier = {},
                 dockerls = {},
                 gopls = {},
                 ruff = {
@@ -376,12 +377,13 @@ require("lazy").setup({
                 lsp_fallback = true,
             },
             formatters_by_ft = {
-                html = { "djlint" },
                 go = { "goimports", "gofmt" },
+                html = { "djlint" },
+                javascript = { "prettier" },
+                json = { "prettier" },
                 lua = { "stylelua" },
                 python = { "isort", "black" },
-                javascript = { { 'prettierd', "prettier" } },
-                typescript = { { 'prettierd', "prettier" } },
+                typescript = { "prettier" },
             },
             formatters = {
                 isort = {
