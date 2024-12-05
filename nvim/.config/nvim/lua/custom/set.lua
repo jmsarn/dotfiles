@@ -6,9 +6,6 @@ vim.opt.termguicolors = true
 
 vim.opt.showmode = false
 
--- Set for obsidian
-vim.opt.conceallevel = 2
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
