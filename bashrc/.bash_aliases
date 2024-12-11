@@ -23,3 +23,6 @@ alias edit-lazy='nvim $LAZY_CONFIG'
 
 # Update lazy packages
 alias update-lazy='nvim --headless "+Lazy! sync" +qa'
+
+# Clipboard
+alias clp='xclip -sel clip'
