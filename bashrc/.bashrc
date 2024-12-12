@@ -155,3 +155,5 @@ nvm use --silent --lts
 # Shortcut to nvim lazy config
 export LAZY_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/custom/lazy.lua
 
+# Disable Ctrl+S
+stty -ixon
