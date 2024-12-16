@@ -18,11 +18,11 @@ alias cat='batcat'
 alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
 alias ll='eza -a --color=always --long --icons=always'
 
-# Edit nvim lazy file
-alias edit-lazy='nvim $LAZY_CONFIG'
-
 # Update lazy packages
 alias update-lazy='nvim --headless "+Lazy! sync" +qa'
 
 # Clipboard
 alias clp='xclip -sel clip'
+
+# Start sqlite with headers on
+alias sqlite3="sqlite3 -cmd '.headers on'"

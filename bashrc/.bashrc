@@ -152,8 +152,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm use --silent --lts
 
-# Shortcut to nvim lazy config
-export LAZY_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/nvim/lua/custom/lazy.lua
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
 
 # Disable Ctrl+S
 stty -ixon
