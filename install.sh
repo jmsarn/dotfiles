@@ -1,10 +1,15 @@
 #!/bin/bash
 
+FZF_VERSION="0.57.0"
 GO_VERSION="1.23.4"
 
 # Install additional apt packages
 sudo apt-get update
-sudo apt-get install -y bat fzf tmux stow xclip
+sudo apt-get install -y bat tmux stow xclip
+
+# Install fzf
+curl -LO "https://github.com/junegunn/fzf/releases/download/v${FZF_VERSION}/fzf-${FZF_VERSION}-linux_amd64.tar.gz"
+sudo tar -C /usr/local/bin -xzf "fzf-${FZF_VERSION}-linux-amd64.tar.gz" 
 
 # Install Golang
 curl -OL "https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz"
