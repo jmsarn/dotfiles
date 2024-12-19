@@ -5,11 +5,11 @@ alias vim='nvim'
 alias venv='source env/bin/activate'
 
 # Start tmux in github directory
-alias tmx='tmux new-session -c ~/github.com/rs21io'
+alias tmx='tmux new-session -c ${TMUX_BASE-~/github.com}'
 
 # AWS SSO
-alias sso='aws sso login --sso-session sso-session && export AWS_PROFILE=pub-admin'
-alias sso-gov='aws sso login --sso-session gov-sso-session && export AWS_PROFILE=gov-admin'
+alias sso='aws sso login --sso-session sso-session'
+alias sso-gov='aws sso login --sso-session gov-sso-session'
 
 # Alias cat with bat
 alias cat='batcat'
