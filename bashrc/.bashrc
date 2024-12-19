@@ -155,5 +155,9 @@ nvm use --silent --lts
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
+# Setup direnv hook
+eval "$(direnv hook bash)"
+export DIRENV_LOG_FORMAT=""
+
 # Disable Ctrl+S
 stty -ixon
