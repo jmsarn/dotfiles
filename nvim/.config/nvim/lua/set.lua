@@ -38,8 +38,6 @@ vim.opt.colorcolumn = "88"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.g.python3_host_prog = os.getenv("HOME") .. "/.local/venv/nvim/bin/python3"
-
 vim.g.have_nerd_font = true
 
 -- Highlight when yanking (copying) text
