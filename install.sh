@@ -32,7 +32,7 @@ sudo mv yq_linux_amd64 /usr/local/bin/yq
 
 # Install cargo packages
 ~/.cargo/bin/cargo install eza, ripgrep
-cargo install --git https://github.com/astral-sh/uv uv
+~/.cargo/bin/cargo install --git https://github.com/astral-sh/uv uv
 
 # Install neovim
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
