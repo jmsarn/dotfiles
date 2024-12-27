@@ -142,6 +142,9 @@ shopt -s histappend
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 
+# Zig
+export PATH="$HOME/.local/zig-linux-x86_64-0.13.0:$PATH"
+
 # Pulumi
 export PATH=$PATH:$HOME/.pulumi/bin
 export PULUMI_CONFIG_PASSPHRASE=""
