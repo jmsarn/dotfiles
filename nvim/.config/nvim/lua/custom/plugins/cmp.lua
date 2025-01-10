@@ -28,6 +28,7 @@ return {
         --    for various frameworks/libraries/etc. but you will have to
         --    set up the ones that are useful for you.
         'rafamadriz/friendly-snippets',
+        'onsails/lspkind.nvim',
     },
     config = function()
         -- See `:help cmp`
@@ -95,7 +96,7 @@ return {
                 { name = "nvim_lsp" },
                 { name = "luasnip" },
                 { name = "path" },
-                { name = "copilot" },
+                -- { name = "copilot" },
             },
         })
     end,
