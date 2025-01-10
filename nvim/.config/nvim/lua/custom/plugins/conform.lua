@@ -14,13 +14,8 @@ return {
             javascript = { "prettier" },
             json = { "prettier" },
             lua = { "stylelua" },
-            python = { "isort", "black" },
+            python = { "ruff_organize_imports", "ruff_format" },
             typescript = { "prettier" },
         },
-        formatters = {
-            isort = {
-                prepend_args = { "--profile", "black" },
-            },
-        }
     },
 }
