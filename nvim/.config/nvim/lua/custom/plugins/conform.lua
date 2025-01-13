@@ -16,6 +16,7 @@ return {
             lua = { "stylelua" },
             python = { "ruff_organize_imports", "ruff_format" },
             typescript = { "prettier" },
+            yaml = { "prettier" },
         },
     },
 }
