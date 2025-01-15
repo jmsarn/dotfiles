@@ -29,6 +29,9 @@ vim.keymap.set("n", "<leader>v", "<C-v>")
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
+vim.keymap.set('n', '<leader>td', function()
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { silent = true, noremap = true })
 vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end,
     { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end,
