@@ -7,7 +7,7 @@ YQ_VERSION="4.44.6"
 
 # Install additional apt packages
 sudo apt-get update
-sudo apt-get install -y bat tmux stow xclip
+sudo apt-get install -y bat tmux stow xclip libssl-dev
 
 # Install direnv
 curl -LO "https://github.com/direnv/direnv/releases/download/v${DIRENV_VERSION}/direnv.linux-amd64"
@@ -31,7 +31,7 @@ chmod +x yq_linux_amd64
 sudo mv yq_linux_amd64 /usr/local/bin/yq
 
 # Install cargo packages
-~/.cargo/bin/cargo install eza, ripgrep
+~/.cargo/bin/cargo install cargo-update, eza, ripgrep
 ~/.cargo/bin/cargo install --git https://github.com/astral-sh/uv uv
 
 # Install neovim
