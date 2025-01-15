@@ -2,7 +2,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     opts = {
-        ensure_installed = { "bash", "diff", "lua", "markdown", "python" },
+        ensure_installed = { "bash", "diff", "lua", "markdown", "markdown_inline", "python" },
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
