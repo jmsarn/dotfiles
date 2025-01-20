@@ -130,7 +130,8 @@ export PS1='\w$(__git_ps1 " (%s)")\$ '
 export GPG_TTY=$(tty)
 
 # GitHub token
-export GITHUB_TOKEN="op://Private/GitHub PAT/Access Token/Token"
+export GITHUB_TOKEN="op://Private/GitHub PAT/token"
+source /home/james/.config/op/plugins.sh
 
 # Bash history will carry over to tmux sessions
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
