@@ -116,6 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# set -o vi
+
 # Default editor
 export EDITOR=nvim
 export VISUAL="$EDITOR"
@@ -162,6 +164,7 @@ eval "$(fzf --bash)"
 # Setup direnv hook
 eval "$(direnv hook bash)"
 export DIRENV_LOG_FORMAT=""
+export DIRENV_WARN_TIMEOUT="1m"
 
 # Disable Ctrl+S
 stty -ixon
