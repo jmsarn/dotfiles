@@ -13,13 +13,17 @@ return {
                 path = "~/github.com/jmsarn/obsidian-vaults/personal",
             },
             {
+                name = "rs21",
+                path = "~/github.com/rs21io/knowledge-base/vault",
+            },
+            {
                 name = "work",
                 path = "~/github.com/jmsarn/obsidian-vaults/work",
             },
         },
         ui = {
-            enable = true,             -- set to false to disable all additional syntax features
-            update_debounce = 200,     -- update delay after a text change (in milliseconds)
+            enable = true,         -- set to false to disable all additional syntax features
+            update_debounce = 200, -- update delay after a text change (in milliseconds)
             -- Define how various check-boxes are displayed
             checkboxes = {
                 -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
