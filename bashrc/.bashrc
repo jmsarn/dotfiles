@@ -135,6 +135,10 @@ export GPG_TTY=$(tty)
 export GITHUB_TOKEN="op://Private/GitHub PAT/token"
 source /home/james/.config/op/plugins.sh
 
+gh-open() {
+  xdg-open $(git remote get-url origin | sed -E 's|git@([^:]+):(.*)|https://\1/\2|' | sed 's|\.git$||')
+}
+
 # Bash history will carry over to tmux sessions
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 shopt -s histappend
