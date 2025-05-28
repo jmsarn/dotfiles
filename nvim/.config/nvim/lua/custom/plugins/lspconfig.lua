@@ -143,7 +143,7 @@ return {
                 },
             },
             ts_ls = {},
-            volar = {},
+            vue_ls = {},
             jsonls = {
                 settings = {
                     json = {
