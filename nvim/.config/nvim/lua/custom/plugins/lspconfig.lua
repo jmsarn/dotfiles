@@ -12,7 +12,6 @@ return {
             "folke/neodev.nvim",
             opts = { library = { plugins = { "nvim-dap-ui" }, types = true } }
         },
-        "saghen/blink.cmp"
     },
     config = function()
         vim.api.nvim_create_autocmd("LspAttach", {
