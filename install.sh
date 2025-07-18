@@ -5,9 +5,12 @@ FZF_VERSION="0.57.0"
 GO_VERSION="1.23.4"
 YQ_VERSION="4.44.6"
 
+# Create repository directory
+mkdir -p ~/github.com
+
 # Install additional apt packages
 sudo apt-get update
-sudo apt-get install -y bat tmux stow xclip libssl-dev
+sudo apt-get install -y bat tmux stow xclip libssl-dev ninja-build gettext cmake curl build-essential
 
 # Install direnv
 curl -LO "https://github.com/direnv/direnv/releases/download/v${DIRENV_VERSION}/direnv.linux-amd64"
@@ -35,9 +38,11 @@ sudo mv yq_linux_amd64 /usr/local/bin/yq
 ~/.cargo/bin/cargo install --git https://github.com/astral-sh/uv uv
 
 # Install neovim
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt-get install -y neovim
+git clone https://github.com/neovim/neovim.git ~/github.com/neovim/neovim/
+cd ~/github.com/neovim/neovim
+make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=Release
+make install
+cd -
 
 # Install node version manager and node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -59,8 +64,6 @@ curl -sS https://downloads.1password.com/linux/keys/1password.asc | \
   sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg && \
   sudo apt update && sudo apt install -y 1password-cli
 
-# Create repository directory
-mkdir -p ~/github.com
 
 # 1password integration with direnv
 git clone https://github.com/venkytv/direnv-op.git ~/github.com/venkytv/direnv-op/
