@@ -146,6 +146,9 @@ shopt -s histappend
 # Rust
 . "$HOME/.cargo/env"
 
+# Neovim
+export PATH="$HOME/neovim/bin:$PATH"
+
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 
