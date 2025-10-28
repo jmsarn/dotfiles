@@ -5,7 +5,7 @@ alias vim='nvim'
 alias venv='source env/bin/activate'
 
 # Start tmux in github directory
-alias tmx='tmux new-session -c ${TMUX_BASE-~/github.com}'
+alias tmx='tmux new-session -c ${TMUX_BASE:-~/github.com}'
 
 # AWS SSO
 alias sso='aws sso login --sso-session sso-session'
@@ -26,3 +26,6 @@ alias clp='xclip -sel clip'
 
 # Start sqlite with headers on
 alias sqlite3="sqlite3 -cmd '.headers on'"
+
+# Get Weather
+alias wttr='curl wttr.in/${WEATHER_COORDS:-abq}?u'
