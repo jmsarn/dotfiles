@@ -175,3 +175,6 @@ export DIRENV_WARN_TIMEOUT="1m"
 
 # Disable Ctrl+S
 stty -ixon
+
+# Starship prompt
+eval "$(starship init bash)"
