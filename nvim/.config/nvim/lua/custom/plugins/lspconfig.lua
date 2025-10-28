@@ -123,24 +123,24 @@ return {
                     end
                 end,
             },
-            basedpyright = {
-                settings = {
-                    pyright = {
-                        disableOrganizeImports = true,
-                    },
-                    basedpyright = {
-                        analysis = {
-                            autoSearchPaths = true,
-                            diagnosticMode = "openFilesOnly",
-                            ignore = { "*" },
-                            reportUnknownMemberType = false,
-                            strictParameterNoneValue = false,
-                            typeCheckingMode = "off",
-                            useLibraryCodeForTypes = true,
-                        },
-                    },
-                },
-            },
+            -- basedpyright = {
+            --     settings = {
+            --         pyright = {
+            --             disableOrganizeImports = true,
+            --         },
+            --         basedpyright = {
+            --             analysis = {
+            --                 autoSearchPaths = true,
+            --                 diagnosticMode = "openFilesOnly",
+            --                 ignore = { "*" },
+            --                 reportUnknownMemberType = false,
+            --                 strictParameterNoneValue = false,
+            --                 typeCheckingMode = "off",
+            --                 useLibraryCodeForTypes = true,
+            --             },
+            --         },
+            --     },
+            -- },
             ts_ls = {},
             vue_ls = {},
             jsonls = {

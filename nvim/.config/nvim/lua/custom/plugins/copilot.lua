@@ -1,14 +1,14 @@
 return {
 
-    {
-        "zbirenbaum/copilot-cmp",
-        dependencies = {
-            "onsails/lspkind.nvim",
-        },
-        config = function()
-            require("copilot_cmp").setup()
-        end,
-    },
+    -- {
+    --     "zbirenbaum/copilot-cmp",
+    --     dependencies = {
+    --         "onsails/lspkind.nvim",
+    --     },
+    --     config = function()
+    --         require("copilot_cmp").setup()
+    --     end,
+    -- },
     {
         "zbirenbaum/copilot.lua",
         lazy = true,
@@ -20,6 +20,5 @@ return {
                 panel = { enabled = false },
             })
         end,
-
     }
 }
