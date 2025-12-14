@@ -12,7 +12,7 @@ alias sso='aws sso login --sso-session sso-session'
 alias sso-gov='aws sso login --sso-session gov-sso-session'
 
 # Alias cat with bat
-alias cat='batcat'
+alias cat='bat'
 
 # Alias ls with eza
 alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
@@ -29,3 +29,6 @@ alias sqlite3="sqlite3 -cmd '.headers on'"
 
 # Get Weather
 alias wttr='curl wttr.in/${WEATHER_COORDS:-abq}?u'
+
+# Alias docker with podman
+alias docker='podman'
