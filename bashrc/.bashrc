@@ -133,7 +133,6 @@ export GPG_TTY=$(tty)
 
 # GitHub token
 export GITHUB_TOKEN="op://Private/GitHub PAT/token"
-source /home/james/.config/op/plugins.sh
 
 gh-open() {
   xdg-open $(git remote get-url origin | sed -E 's|git@([^:]+):(.*)|https://\1/\2|' | sed 's|\.git$||')
@@ -142,18 +141,6 @@ gh-open() {
 # Bash history will carry over to tmux sessions
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 shopt -s histappend
-
-# Rust
-. "$HOME/.cargo/env"
-
-# Neovim
-export PATH="$HOME/neovim/bin:$PATH"
-
-# Golang
-export PATH=$PATH:/usr/local/go/bin
-
-# Zig
-export PATH="$HOME/.local/zig-linux-x86_64-0.13.0:$PATH"
 
 # Pulumi
 export PATH=$PATH:$HOME/.pulumi/bin
@@ -171,10 +158,14 @@ eval "$(fzf --bash)"
 # Setup direnv hook
 eval "$(direnv hook bash)"
 export DIRENV_LOG_FORMAT=""
-export DIRENV_WARN_TIMEOUT="1m"
 
 # Disable Ctrl+S
 stty -ixon
 
 # Starship prompt
 eval "$(starship init bash)"
+
+# Google Cloud SDK.
+GOOGLE_SDK_DIR="$HOME/google-cloud-sdk"
+if [ -f "$GOOGLE_SDK_DIR/path.bash.inc" ]; then . "$GOOGLE_SDK_DIR/path.bash.inc"; fi
+if [ -f "$GOOGLE_SDK_DIR/completion.bash.inc" ]; then . "$GOOGLE_SDK_DIR/completion.bash.inc"; fi
