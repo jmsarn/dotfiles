@@ -22,7 +22,7 @@ alias ll='eza -a --color=always --long --icons=always'
 alias update-lazy='nvim --headless "+Lazy! sync" +qa'
 
 # Clipboard
-alias clp='xclip -sel clip'
+alias clp='wl-copy'
 
 # Start sqlite with headers on
 alias sqlite3="sqlite3 -cmd '.headers on'"
