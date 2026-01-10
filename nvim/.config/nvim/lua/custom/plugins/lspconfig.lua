@@ -123,30 +123,31 @@ return {
 					end
 				end,
 			},
-			basedpyright = {
-				settings = {
-					pyright = {
-						disableOrganizeImports = true,
-					},
-					basedpyright = {
-						analysis = {
-							autoSearchPaths = true,
-							diagnosticMode = "workspace",
-							ignore = { "*" },
-							reportUnknownMemberType = false,
-							strictParameterNoneValue = false,
-							typeCheckingMode = "off",
-							useLibraryCodeForTypes = true,
-						},
-					},
-				},
-				on_init = function(client)
-					local venv_path = vim.fn.getcwd() .. "/.venv/bin/python"
-					if vim.fn.filereadable(venv_path) == 1 then
-						client.config.settings.basedpyright.analysis.pythonPath = venv_path
-					end
-				end,
-			},
+			ty = {},
+			-- basedpyright = {
+			-- 	settings = {
+			-- 		pyright = {
+			-- 			disableOrganizeImports = true,
+			-- 		},
+			-- 		basedpyright = {
+			-- 			analysis = {
+			-- 				autoSearchPaths = true,
+			-- 				diagnosticMode = "workspace",
+			-- 				ignore = { "*" },
+			-- 				reportUnknownMemberType = false,
+			-- 				strictParameterNoneValue = false,
+			-- 				typeCheckingMode = "off",
+			-- 				useLibraryCodeForTypes = true,
+			-- 			},
+			-- 		},
+			-- 	},
+			-- 	on_init = function(client)
+			-- 		local venv_path = vim.fn.getcwd() .. "/.venv/bin/python"
+			-- 		if vim.fn.filereadable(venv_path) == 1 then
+			-- 			client.config.settings.basedpyright.analysis.pythonPath = venv_path
+			-- 		end
+			-- 	end,
+			-- },
 			ts_ls = {},
 			vue_ls = {},
 			jsonls = {
