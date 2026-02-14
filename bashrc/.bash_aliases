@@ -4,8 +4,13 @@ alias vim='nvim'
 # Activate virtual environment
 alias venv='source env/bin/activate'
 
-# Start tmux in github directory
-alias tmx='tmux new-session -c ${TMUX_BASE:-~/github.com}'
+# Start tmux with preconfigured layout
+alias tmx='tmuxp load dev'
+
+# GCP
+alias gcp-adc='gcloud auth application-default login'
+alias gcp='gcloud auth login'
+alias fb-auth='firebase login --reauth'
 
 # AWS SSO
 alias sso='aws sso login --sso-session sso-session'
