@@ -19,6 +19,7 @@ PKGS=(
     "starship"
     "stow"
     "tmux"
+    "tmuxp"
     "ttf-roboto-mono-nerd"
     "unzip"
     "uv"
