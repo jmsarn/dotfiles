@@ -304,6 +304,10 @@ animations {
     // slowdown 3.0
 }
 
+// Named workspaces
+workspace "primary"
+workspace "secondary"
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
@@ -344,6 +348,37 @@ window-rule {
 /-window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+// Control location where apps are launched at startup
+window-rule {
+    match at-startup=true app-id="com.mitchellh.ghostty"
+    // match at-startup=true
+    open-on-workspace "primary"
+}
+
+window-rule {
+    match at-startup=true app-id="chromium"
+    // match at-startup=true
+    open-on-workspace "primary"
+}
+
+window-rule {
+    match at-startup=true app-id="1password"
+    // match at-startup=true
+    open-on-workspace "secondary"
+}
+
+window-rule {
+    match app-id="Slack"
+    // match at-startup=true
+    open-on-workspace "secondary"
+}
+
+window-rule {
+    match app-id="spotify"
+    // match at-startup=true
+    open-on-workspace "secondary"
 }
 
 binds {
@@ -616,5 +651,10 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
+// Startup applications
 spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "ghostty"
+spawn-at-startup "chromium"
 spawn-at-startup "1password"
+// spawn-at-startup "slack"
+// spawn-at-startup "spotify-launcher"
