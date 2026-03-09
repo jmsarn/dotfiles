@@ -8,9 +8,9 @@ alias venv='source env/bin/activate'
 alias tmx='tmuxp load dev'
 
 # GCP
-alias gcp-adc='gcloud auth application-default login'
-alias gcp='gcloud auth login'
-alias fb-auth='firebase login --reauth'
+alias gauth-adc='gcloud auth application-default login'
+alias gauth='gcloud auth login'
+alias fbauth='firebase login --reauth'
 
 # AWS SSO
 alias sso='aws sso login --sso-session sso-session'
